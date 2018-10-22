@@ -1,0 +1,47 @@
+name: ui_challenges
+description: UI Challenges Flutter
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/avatars/avatar1.png
+    - assets/images/avatars/avatar2.png
+    - assets/images/avatars/avatar3.png
+    - assets/images/avatars/avatar4.png
+    - assets/images/avatars/avatar5.png
+    - assets/images/avatars/avatar6.png
+    - assets/images/avatars/avatar7.png
+    - assets/images/avatars/user_image.png
+
+    - assets/images/ic_user.png
+    - assets/images/ic_back.png
+    - assets/images/ic_trash.png
+
+    - assets/images/ic_inbox.png
+    - assets/images/ic_projects_todo.png
+    - assets/images/ic_projects_done.png
+    - assets/images/ic_calendar.png
+    - assets/images/ic_tag.png
+
+
+  fonts:
+     - family: Roboto
+       fonts:
+         - asset: assets/fonts/Roboto-Medium.ttf
+
