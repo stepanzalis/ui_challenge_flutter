@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_challenges/menu_holder.dart';
 import 'package:ui_challenges/project/project_screen.dart';
 
 void main() => runApp(new MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white
         )
       ),
-      home: new ProjectScreen(),
+      home: Menuholder(),
     );
   }
 }

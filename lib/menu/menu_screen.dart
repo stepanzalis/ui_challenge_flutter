@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_challenges/io/data/data.dart';
-import 'package:ui_challenges/io/data/person.dart';
 import 'package:ui_challenges/menu/menu_item.dart';
-import 'package:ui_challenges/project/item_person.dart';
 import 'package:ui_challenges/theme/text_styles.dart';
 
 class MenuScreen extends StatefulWidget {
