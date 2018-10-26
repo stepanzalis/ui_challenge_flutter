@@ -4,6 +4,10 @@ import 'package:ui_challenges/menu/menu_item.dart';
 import 'package:ui_challenges/theme/text_styles.dart';
 
 class MenuScreen extends StatefulWidget {
+
+  MenuScreen(this.tap);
+  Function(int) tap;
+
   @override
   _MenuScreenState createState() => _MenuScreenState();
 }
@@ -26,12 +30,11 @@ class _MenuScreenState extends State<MenuScreen> {
                   itemCount: data.length,
                   itemBuilder: (context, index) {
                     final model = data[index];
-                    if (model.path.isEmpty)
-                      return buildDivider(context);
-                    else
-                      return ItemMenu(model.path, model.name);
-                  }),
-            ),
+                    return new GestureDetector(
+                      onTap: widget.tap(index),
+                      child: model.path.isEmpty ? buildDivider(context) :  ItemMenu(model.path, model.name));
+                  },
+            )),
           ],
         ),
       ),
