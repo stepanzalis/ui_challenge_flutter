@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:ui_challenges/theme/text_styles.dart';
 
 class AnimatedScreen extends StatefulWidget {
-
   AnimatedScreen({@required this.appBar, @required this.child});
 
   final String appBar;
@@ -16,11 +15,14 @@ class AnimatedScreen extends StatefulWidget {
 class _AnimatedScreenState extends State<AnimatedScreen>
     with SingleTickerProviderStateMixin {
   AnimationController _animationController;
-  Animation<double> _scale;
+  Animation<double> _tween;
+
+  var isOpen = false;
 
   @override
   Widget build(BuildContext context) {
-    final openPercent = Interval(0.0, 0.8, curve: Curves.easeOut).transform(_scale.value);
+    final openPercent =
+        Interval(0.0, 0.8, curve: Curves.easeOut).transform(_tween.value);
 
     final slideAmount = 255.0 * openPercent;
     final contentScale = 1 - (0.35 * openPercent);
@@ -40,8 +42,8 @@ class _AnimatedScreenState extends State<AnimatedScreen>
                 ),
               ],
             ),
-            child:
-                Scaffold(appBar: getAppBar(widget.appBar), body: widget.child)));
+            child: Scaffold(
+                appBar: getAppBar(widget.appBar), body: widget.child)));
   }
 
   Widget getAppBar(String appBarText) {
@@ -51,7 +53,12 @@ class _AnimatedScreenState extends State<AnimatedScreen>
       leading: IconButton(
           icon: Icon(CupertinoIcons.back, color: Colors.grey[400], size: 25.0),
           onPressed: () {
-            _animationController.forward();
+            isOpen
+                ? _animationController.reverse()
+                : _animationController.forward();
+            setState(() {
+              isOpen = !isOpen;
+            });
           }),
       elevation: 0.0,
       actions: <Widget>[
@@ -75,7 +82,7 @@ class _AnimatedScreenState extends State<AnimatedScreen>
         setState(() {});
       });
 
-    _scale = Tween(begin: 0.0, end: 1.0).animate(_animationController);
+    _tween = Tween(begin: 0.0, end: 1.0).animate(_animationController);
 
     super.initState();
   }

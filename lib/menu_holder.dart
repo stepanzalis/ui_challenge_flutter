@@ -22,7 +22,7 @@ class _MenuholderState extends State<Menuholder> {
           MenuScreen((selectedId) {
               this.selectedId = selectedId;
               if (selectedId == 1) {
-                  // currectScreen = AnimatedScreen(appBar: "Project", child: Widget); // different screen
+                  // currectScreen = AnimatedScreen(appBar: "XXX", child: Widget); // different screen
               }
           }),
           currectScreen
