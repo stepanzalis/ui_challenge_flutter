@@ -14,5 +14,5 @@ Feel free to comment and contribute!
   Design was taken from Roman Bova (https://dribbble.com/w2lker). Nice and clean design with beatiful slide animation.
   Result:
   
- <img src="/images/app.gif" width="300" height="550" />
+ <img src="/images/app.gif" width="300" height="650" />
   
