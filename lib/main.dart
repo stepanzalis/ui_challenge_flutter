@@ -5,9 +5,7 @@ void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Theme.of(context).copyWith(
         primaryColor: Colors.white,
@@ -17,5 +15,4 @@ class MyApp extends StatelessWidget {
       ),
       home: Menuholder(),
     );
-  }
 }

@@ -8,12 +8,9 @@ class ProjectScreen extends StatelessWidget {
   final data = DataHolder();
 
   @override
-  Widget build(BuildContext context) {
-    return getBody(data);
-  }
+  Widget build(BuildContext context) => getBody(data);
 
-  Widget getBody(data) {
-    return Container(
+  Widget getBody(data) => Container(
         color: Colors.white,
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,11 +24,8 @@ class ProjectScreen extends StatelessWidget {
                   child: ListView.builder(
                       padding: EdgeInsets.only(top: 40),
                       itemCount: data.persons.length,
-                      itemBuilder: (context, int index) {
-                        return Padding(
+                      itemBuilder: (context, int index) => Padding(
                             padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                            child: ItemPerson(data.persons[index]));
-                      }))
+                            child: ItemPerson(data.persons[index]))))
             ]));
-  }
 }

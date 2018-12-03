@@ -46,8 +46,7 @@ class _AnimatedScreenState extends State<AnimatedScreen>
                 appBar: getAppBar(widget.appBar), body: widget.child)));
   }
 
-  Widget getAppBar(String appBarText) {
-    return AppBar(
+  Widget getAppBar(String appBarText) => AppBar(
       title: Text(appBarText,
           style: MyTextTheme().getLightSmallGrey().copyWith(fontSize: 20.0)),
       leading: IconButton(
@@ -64,14 +63,13 @@ class _AnimatedScreenState extends State<AnimatedScreen>
       actions: <Widget>[
         IconButton(
           icon: Image(
-              image: AssetImage("assets/images/ic_trash.png"),
+              image: AssetImage('assets/images/ic_trash.png'),
               width: 25,
               height: 25),
           onPressed: () {},
         )
       ],
     );
-  }
 
   @override
   void initState() {

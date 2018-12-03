@@ -5,17 +5,17 @@ import 'package:ui_challenges/project/project_screen.dart';
 
 class Menuholder extends StatefulWidget {
 
+  @override
   _MenuholderState createState() => _MenuholderState();
 }
 
 class _MenuholderState extends State<Menuholder> {
 
  int selectedId = 0;
- Widget currectScreen = AnimatedScreen(appBar: "Project", child: ProjectScreen());
+ Widget currectScreen = AnimatedScreen(appBar: 'Project', child: ProjectScreen());
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
+  Widget build(BuildContext context) => Container(
       color: Colors.white,
       child: Stack(
         children: <Widget>[
@@ -29,5 +29,4 @@ class _MenuholderState extends State<Menuholder> {
           ],
       ),
     );
-  }
 }

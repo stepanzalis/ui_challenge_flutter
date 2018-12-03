@@ -41,20 +41,15 @@ class _MenuScreenState extends State<MenuScreen> {
     ));
   }
 
-  Widget buildDivider(BuildContext context) {
-    return Padding(
+  Widget buildDivider(BuildContext context) => Padding(
       padding: const EdgeInsets.only(left: 30.0, top: 15, bottom: 15),
       child: Container(
         height: 3.0,
         color: Colors.grey[300],
       ),
     );
-  }
 
-  _buildAvatar() {
-    return ListTile(
-        leading: CircleAvatar(radius: 25.0,child: Image.asset("assets/images/avatars/user_image.png", fit: BoxFit.contain)),
-        title: Text("Roman Bova", style: MyTextTheme().getGrey().copyWith(fontSize: 24, fontWeight: FontWeight.w600)), subtitle: Text("UI/UX Designer", style: MyTextTheme().getSmallBlue().copyWith(fontSize: 20, fontWeight: FontWeight.w400)));
-
-  }
+  _buildAvatar() => ListTile(
+        leading: CircleAvatar(radius: 25.0,child: Image.asset('assets/images/avatars/user_image.png', fit: BoxFit.contain)),
+        title: Text('Roman Bova', style: MyTextTheme().getGrey().copyWith(fontSize: 24, fontWeight: FontWeight.w600)), subtitle: Text('UI/UX Designer', style: MyTextTheme().getSmallBlue().copyWith(fontSize: 20, fontWeight: FontWeight.w400)));
 }

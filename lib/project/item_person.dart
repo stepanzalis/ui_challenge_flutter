@@ -9,8 +9,7 @@ class ItemPerson extends StatelessWidget {
   final MyTextTheme textTheme = MyTextTheme();
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
+  Widget build(BuildContext context) => Padding(
       padding: const EdgeInsets.only(left: 20.0),
       child: Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
         roundedImage(person.imagePath, 40.0),
@@ -24,18 +23,14 @@ class ItemPerson extends StatelessWidget {
             ])),
       ]),
     );
-  }
 
-  Widget roundedImage(String path, double radius) {
-    return Material(
+  Widget roundedImage(String path, double radius) => Material(
         shape: CircleBorder(),
         color: Colors.transparent,
         shadowColor: Colors.transparent,
         child: Image.asset(path, width: radius, height: radius));
-  }
 
-  Widget firstRow(person, context) {
-    return Row(
+  Widget firstRow(person, context) => Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text(person.name, style: textTheme.getGrey()),
@@ -46,13 +41,10 @@ class ItemPerson extends StatelessWidget {
                       .getLightSmallGrey()
                       .copyWith(fontSize: 17.0, fontWeight: FontWeight.w600)))
         ]);
-  }
 
-  Widget secondRow(person, context) {
-    return Row(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
+  Widget secondRow(person, context) => Row(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
       Text(person.state, style: textTheme.getLightSmallGrey()),
       SizedBox(width: 15.0),
       Text(person.task, style: textTheme.getSmallBlue())
     ]);
-  }
 }

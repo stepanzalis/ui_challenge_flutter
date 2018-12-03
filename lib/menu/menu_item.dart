@@ -8,8 +8,7 @@ class ItemMenu extends StatelessWidget {
   final String name;
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
+  Widget build(BuildContext context) => Padding(
       padding: const EdgeInsets.only(left: 30.0, top: 25.0, bottom: 25.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,5 +24,4 @@ class ItemMenu extends StatelessWidget {
         ],
       ),
     );
-  }
 }
