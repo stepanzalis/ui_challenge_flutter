@@ -16,3 +16,7 @@ Feel free to comment and contribute!
   
  <a href="https://imgflip.com/gif/2lu0tr"><img src="https://i.imgflip.com/2lu0tr.gif" title="made at imgflip.com"/></a>
   
+  
+
+### 2. Chrome browser - Coming soon!
+  The goals is to implement the behaviour of panels in the mobile version of Chrome browser. Including drag-and-drop, pageView   and more.
