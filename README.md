@@ -18,5 +18,9 @@ Feel free to comment and contribute!
   
   
 
-### 2. Chrome browser - Coming soon!
-  The goals is to implement the behaviour of panels in the mobile version of Chrome browser. Including drag-and-drop, pageView   and more.
+### 2. Thermostat
+  The goal was to implement the behaviour of scrollable ruler to change a temperature (using a CustomPainter).
+  
+  Result: 
+  <img src="https://github.com/stepanzalis/ui_challenge_flutter/blob/master/temp_slider/screenshot.png" align="left" height="560" width="260">
+
