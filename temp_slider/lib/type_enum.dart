@@ -1,0 +1,4 @@
+
+enum IconText {
+  pinkIconGreyText, greyIconPinkText
+}
