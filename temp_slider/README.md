@@ -1,16 +1,9 @@
-# temperature_oval
+# Smart Home App
 
-A new Flutter project.
+Original design from https://dribbble.com/shakuro
+Project page: https://dribbble.com/shots/5534531-Smart-Home-App-Thermostat
 
-## Getting Started
+<a href="url"><img src="https://github.com/stepanzalis/ui_challenge_flutter/blob/master/temp_slider/screenshot.png" align="left" height="650" width="300" ></a>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
