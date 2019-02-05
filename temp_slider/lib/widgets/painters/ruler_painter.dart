@@ -4,23 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:temperature_oval/colors.dart';
 
 class RulerPainter extends CustomPainter {
-  
   final smallLength = 25.0;
   final longLength = 15.0;
+  final numberOfLines = 200;
 
   final strokeWidth = 1.0;
 
   final Paint rulerPaint;
 
-  RulerPainter({Key key}) : rulerPaint = new Paint() {
+  RulerPainter({Key key, this.scrollLen}) : rulerPaint = new Paint() {
     rulerPaint.color = rulerColor;
   }
 
+  final double scrollLen;
+
   @override
   void paint(Canvas canvas, Size size) {
-
     var tickMarkLength;
-    final angle = 2 * pi / 400;
+    final angle = 2 * pi / numberOfLines;
 
     final radius = size.width;
     canvas.save();
@@ -30,11 +31,20 @@ class RulerPainter extends CustomPainter {
       ..strokeWidth = 5.0
       ..color = pinkColor;
 
+    final shadow = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 10.0
+      ..color = pinkColor
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 90);
+
+    // pink border around ruler
     canvas.drawCircle(new Offset(radius, radius), radius + 8, circlePaint);
+    canvas.drawCircle(new Offset(radius, radius), radius + 8, shadow);
 
     // drawing
     canvas.translate(radius, radius);
-    for (var i = 0; i < 400; i++) {
+
+    for (var i = 0; i < numberOfLines; i++) {
       tickMarkLength = i % 5 == 0 ? smallLength : longLength;
       rulerPaint.strokeWidth = strokeWidth;
       canvas.drawLine(new Offset(0.0, -radius),
@@ -42,10 +52,9 @@ class RulerPainter extends CustomPainter {
 
       canvas.rotate(angle);
     }
-
     canvas.restore();
   }
 
   @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
+  bool shouldRepaint(RulerPainter oldDelegate) => true;
 }

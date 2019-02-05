@@ -26,6 +26,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   double value = 3;
+  num temp = 77;
   List<Widget> sampleData = <Widget>[];
 
   @override
@@ -45,11 +46,8 @@ class HomePageState extends State<HomePage> {
               Positioned(
                   top: MediaQuery.of(context).size.height / 4,
                   left: 0,
-                  child: CentralTemp(temperature: '77')),
-              Positioned(
-                  top: 80,
-                  left: MediaQuery.of(context).size.width / 1.4,
-                  child: RulerWidget()),
+                  child: CentralTemp(temperature: temp.toString())),
+              Positioned(top: 30, left: MediaQuery.of(context).size.width / 1.3, child: RulerWidget(size: MediaQuery.of(context).size, function: setTemp)),
               Positioned(
                   left: 30,
                   top: MediaQuery.of(context).size.height / 1.9,
@@ -67,7 +65,7 @@ class HomePageState extends State<HomePage> {
                   top: MediaQuery.of(context).size.height / 1.4,
                   child: IconSlider()),
               Positioned(
-                  child:  Align(
+                  child: Align(
                       alignment: FractionalOffset.bottomCenter,
                       child: IconTextWidget(
                           icon: Icons.power_settings_new,
@@ -77,6 +75,12 @@ class HomePageState extends State<HomePage> {
           ),
         ),
       ));
+
+      setTemp(temp) {
+        setState(() {
+           this.temp = temp.round();
+        });
+      }
 
   @override
   void initState() {
@@ -89,5 +93,3 @@ class HomePageState extends State<HomePage> {
     super.initState();
   }
 }
-
-
