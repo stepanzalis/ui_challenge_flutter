@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:ui_challenges/io/menu_provider.dart';
 import 'package:ui_challenges/menu/animated_screen.dart';
 import 'package:ui_challenges/menu/menu_screen.dart';
 import 'package:ui_challenges/project/project_screen.dart';
 
-class Menuholder extends StatefulWidget {
+class MenuHolder extends StatefulWidget {
+  const MenuHolder();
 
   @override
-  _MenuholderState createState() => _MenuholderState();
+  _MenuHolderState createState() => _MenuHolderState();
 }
 
-class _MenuholderState extends State<Menuholder> {
+class _MenuHolderState extends State<MenuHolder> {
 
- int selectedId = 0;
- Widget currectScreen = AnimatedScreen(appBar: 'Project', child: ProjectScreen());
+  Widget currentScreen = AnimatedScreen(appBarTitle: 'Project', body: ProjectScreen());
 
   @override
   Widget build(BuildContext context) => Container(
-      color: Colors.white,
-      child: Stack(
-        children: <Widget>[
-          MenuScreen((selectedId) {
-              this.selectedId = selectedId;
-              if (selectedId == 1) {
-                  // currectScreen = AnimatedScreen(appBar: "XXX", child: Widget); // different screen
-              }
-          }),
-          currectScreen
+        color: Colors.white,
+        child: Stack(
+          children: <Widget>[
+            MenuScreen((selectedId) => {
+                  Provider.of<MenuProvider>(context, listen: false).changeSelectedPage(selectedId),
+                  Provider.of<MenuProvider>(context, listen: false).toggleMenuPanel()
+                }),
+            currentScreen
           ],
-      ),
-    );
+        ),
+      );
 }

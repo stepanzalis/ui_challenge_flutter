@@ -4,11 +4,14 @@ description: UI Challenges Flutter
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=2.2.3 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+
+  # State management
+  provider: ^3.0.0+1
 
   cupertino_icons: ^0.1.2
 
@@ -41,7 +44,7 @@ flutter:
 
 
   fonts:
-     - family: Roboto
-       fonts:
-         - asset: assets/fonts/Roboto-Medium.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
 

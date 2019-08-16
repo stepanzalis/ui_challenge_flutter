@@ -1,8 +1,8 @@
 import 'package:ui_challenges/io/data/person.dart';
-import 'package:ui_challenges/menu/menu_item.dart';
 
-class DataHolder {
-  var persons = [
+class PersonsData {
+
+  final persons = [
     Person('Christian Nelson', 'assets/images/avatars/avatar1.png',
         '17 min ago', 'completed', 'Task name'),
     Person('Martha Ford', 'assets/images/avatars/avatar2.png', '21 min ago',
@@ -19,13 +19,4 @@ class DataHolder {
         'completed', 'Admin')
   ];
 
-  var menu = [
-    ItemMenu('assets/images/ic_inbox.png', 'Inbox'),
-    ItemMenu('assets/images/ic_calendar.png', 'Calendar'),
-    ItemMenu('assets/images/ic_projects_done.png', 'Projects'),
-    ItemMenu('assets/images/ic_user.png', 'Crew'),
-    ItemMenu('assets/images/ic_tag.png', 'Tags'),
-    ItemMenu('', ''),
-    ItemMenu('assets/images/ic_projects_todo.png', 'Projects'),
-  ];
 }
