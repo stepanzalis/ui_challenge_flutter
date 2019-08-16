@@ -3,6 +3,8 @@
 This repository consists of weekly UI challenges from designers at www.dribbble.com.
 If anyone wants to see his design live, feel free to send it to: stepan.zalis@gmail.com. 
 
+[![Codemagic build status](https://api.codemagic.io/apps/5c0770552e0492001c5c5782/5c0770552e0492001c5c5781/status_badge.svg)](https://codemagic.io/apps/5c0770552e0492001c5c5782/5c0770552e0492001c5c5781/latest_build)
+
 Thanks! :v:
 
 ## Flutter is :blue_heart:
@@ -21,6 +23,5 @@ Feel free to comment and contribute!
 ### 2. Thermostat
   The goal was to implement the behaviour of scrollable ruler to change a temperature (using a CustomPainter).
   
-  Result: 
   <img src="https://github.com/stepanzalis/ui_challenge_flutter/blob/master/temp_slider/screenshot.png" align="left" height="560" width="260">
 
