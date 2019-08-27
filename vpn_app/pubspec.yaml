@@ -1,0 +1,36 @@
+name: vpn_app
+description: Flutter UI challenge
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  provider: ^3.1.0
+  flutter_svg: ^0.14.0
+
+dev_dependencies:
+  test:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+
+  assets:
+   - assets/images/
+   - assets/images/flags/
+
+  fonts:
+     - family: SF-Pro-Display
+       fonts:
+         - asset: assets/fonts/SF-Pro-Display-Bold.otf
+         - asset: assets/fonts/SF-Pro-Display-Medium.otf
+         - asset: assets/fonts/SF-Pro-Display-Regular.otf
+         - asset: assets/fonts/SF-Pro-Display-Semibold.otf
+
