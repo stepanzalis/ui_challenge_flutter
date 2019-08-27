@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+/.idea
+*.rawproto
+*.jar
