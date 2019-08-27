@@ -24,3 +24,10 @@ Feel free to comment and contribute!
   Result: 
   <img src="https://github.com/stepanzalis/ui_challenge_flutter/blob/master/temp_slider/screenshot.png" align="left" height="560" width="260">
 
+### 3. VPN 
+  Design was taken from freebie [project365](https://project365.design/2018/10/05/day-278-vpn-mobile-app-ui-kit-sketch-freebie/)
+  
+  Result: 
+  <img src="https://github.com/stepanzalis/ui_challenge_flutter/blob/master/vpn_app/screenshots/screenshot1.png" align="left" height="560" width="260">
+
+  
